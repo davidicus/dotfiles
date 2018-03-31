@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+
+# reload new alias in open terminal
+alias reload=". ~/.bash_aliases"
+
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+# root
+alias ~="cd ~"
+# previous
+alias -- -="cd -"
+
+# shortcuts
+alias fun="cd ~/Projects_Personal/"
+alias mods="cd ~/Projects_Personal/npmModules"
+alias work="cd ~/Projects_IBM"
+alias learn="cd ~/Projects_Learning"
+
+# project shortcuts
+# project shortcuts
+alias static="cd ~/Projects_Personal/Devwatch_Project"
+alias cs="cd ~/Projects_IBM/cp"
+alias wipe="cd ~/Projects_IBM/commonCore/common-core-external-dashboard/com.ibm.internal.externaldashboard/src/main"
+alias wipeR="cd ~/Projects_IBM/commonCore/common-core-external-dashboard"
+alias broker="cd ~/Projects_IBM/commonCore/common-core-service-broker/com.ibm.internal.node.servicebroker/src/main"
+
+#git commands
+alias ga="git add ."
+alias gc="git commit -m"
+alias gac="git commit -am"
+alias gbc="git checkout -b"
+alias gb="git checkout"
+
+# misc.
+
+# pull from working branch not master
+alias pullup="git pull origin unified-ics"
+
+# show all hidden files with ls
+alias ls="ls -a"
+
+# make dir and cd into it
+alias mkcd="mkdir -p && cd $_"
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+
+# copy my public key to the pasteboard
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | printf '=> Public key copied to pasteboard.\n'"
+
+# show/hide hidden files in Finder
+alias showdotfiles="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hidedotfiles="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# hide/show all desktop icons (useful when presenting)
+alias showdeskicons="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+alias hidedeskicons="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+
+# npm: list globally-installed packages
+alias nlg="npm list -g --depth=0"
